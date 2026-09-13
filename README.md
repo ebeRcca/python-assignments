@@ -44,13 +44,13 @@ The OOP stage restructures the system using a single class that stores requisiti
 - Apply automatic approval
 - Process manager decisions
 - Display requisition details
-- Generate statistics across multiple requisitions
+- Generate statistics across multiple requisitions using `requisition_statistic()` 
 
 ### How Part B Works
 - Each requisition is represented by an object
 - The object stores its own data (staff details, items, total, status, approval reference)
-- Methods update the object step‑by‑step
-- A list inside the object stores item/price pairs
+- Methods such as `staff_info()`, `requisitions_details()`, and `requisition_approval()` update the object step‑by‑step
+- A list inside the object stores item/price pairs in `items`
 - Multiple objects represent multiple requisitions
 - A statistics method counts approved, pending, and not‑approved requisitions
   
@@ -69,7 +69,7 @@ Part A functions each perform related steps in the requisition process.
 Part B’s class has high cohesion because all its methods contribute to the overall purpose of handling a requisition.
   
 ### Coupling
-Part A shows low coupling because each function only receives the data it needs and does not rely on other functions' internal workings. The only shared element is the global counter, which is used solely for generating unique IDs.
+Part A shows low coupling because each function only receives the data it needs and does not rely on other functions' internal workings. The only shared element is the global `counter`, which is used solely for generating unique IDs.
 Part B shows low coupling because the testing code interacts with the class only through method calls, so internal changes do not affect other parts of the program.
   
 ### Abstraction
@@ -78,7 +78,7 @@ Part B hides internal details by storing requisition information inside the obje
 
 ### Encapsulation
 Encapsulation applies only to Part B.
-Part B stores requisition details inside the object and updates them only through methods. The program does not directly modify attributes such as status or total; each method manages its own part of the data. 
+Part B stores requisition details inside the object and updates them only through methods. The program does not directly modify attributes such as `status` or `total`; each method manages its own part of the data. 
 
 ### KISS (Keep It Simple)
 Both parts use straightforward logic and clear naming.
@@ -91,7 +91,7 @@ Part B keeps all requisition‑related behaviour inside one class, while the tes
 
 ### Reusability
 Reusability applies only to Part B.
-The RequisitionSystem class can be reused in other simple prototypes because it contains all the logic needed to store, approve, and display a requisition.
+The `RequisitionSystem` class can be reused in other simple prototypes because it contains all the logic needed to store, approve, and display a requisition.
 
 ### DRY (Don’t Repeat Yourself)
 Both parts avoid repeating logic by using functions (Part A) and methods (Part B) to handle repeated actions such as collecting staff information, calculating totals, approving requisitions, and displaying results. This reduces duplication and keeps the workflow consistent.
