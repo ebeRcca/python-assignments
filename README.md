@@ -3,8 +3,8 @@
 ## Overview
 This repository contains a prototype of a simple staff requisition system developed in two parts:
 
-- Part A: A functional (procedural) stage  
-- Part B: An object-oriented (OOP) stage  
+- Part A: functional (procedural) stage  
+- Part B: object-oriented (OOP) stage  
 
 Each part implements the requisition workflow using a different software design approach. 
 
