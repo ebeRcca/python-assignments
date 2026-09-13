@@ -10,22 +10,22 @@ Each version implements the requisition workflow using a different software desi
 
 ---
 
-## Part A — Functional stage
+## Part A — Functional 
 
 **File:** `requisition_system_part_a.py`
 
-The functional stage uses stand-alone functions that each perform one part of the workflow. Each function returns the values needed for the next step, so the requisition is built using local variables passed through the function chain.
+The functional version uses stand-alone functions that each perform one step of the workflow. Each function returns the values needed for the next step, so the requisition is built by passing local variables sequentially from one function to the next.
 
 ### Key Features
-- Collect staff information
-- Generate a unique requisition ID
-- Enter items and calculate totals
-- Automatically approve requisitions under $500
-- Display requisition details    
+- Collects staff information
+- Generates a unique requisition ID
+- Collects items and prices then calculates total
+- Automatically approves requisitions under $500
+- Displays requisition details    
 
 ### How Part A Works
-- A global `counter` generates unique requisition IDs
-- Each function performs one part of the workflow
+- A global `counter` generates a unique requisition ID
+- Each function performs a specifice step in the workflow
 - Returned values are passed to the next function
 - The requisition is processed step‑by‑step using local variables
 
