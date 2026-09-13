@@ -19,8 +19,8 @@ The functional version uses stand-alone functions that each perform one step of 
 ### Key Features
 - Collects staff information
 - Generates a unique requisition ID
-- Collects items and prices then calculates total
-- Automatically approves requisitions under $500
+- Collects items and prices then calculates the total
+- Applies automatic approval for requisitions < $500
 - Displays requisition details    
 
 ### How Part A Works
@@ -35,23 +35,22 @@ The functional version uses stand-alone functions that each perform one step of 
 
 **File:** `requisition_system_part_b.py`
 
-The OOP stage restructures the system using a single class that stores requisition information and provides methods to manage it.
+The OOP stage restructures the system using a single class that stores requisition information and provides methods to manage each step of the workflow.
 
 ### Key Features
-- Store requisition details inside an object
-- Collect staff information
-- Record multiple items and calculate totals
-- Apply automatic approval
-- Process manager decisions
-- Display requisition details
-- Generate statistics across multiple requisitions using `requisition_statistic()` 
+- Stores requisition details inside an object
+- Collects staff information
+- Records items, prices and the calculated total
+- Applies automatic approval for requisitions < $500
+- Processes manager decisions
+- Displays requisition details
+- Generates statistics across multiple requisitions using `requisition_statistic()` 
 
 ### How Part B Works
-- Each requisition is represented by an object
 - The object stores its own data (staff details, items, total, status, approval reference)
-- Methods such as `staff_info()`, `requisitions_details()`, and `requisition_approval()` update the object step‑by‑step
 - A list inside the object stores item/price pairs in `items`
-- Multiple objects represent multiple requisitions
+- Methods such as `staff_info()`, `requisitions_details()`, and `requisition_approval()` update the object step‑by‑step through the workflow
+- Each object represents one requisition, and multiple objects allow the system to process multiple requisitions.
 - A statistics method counts approved, pending, and not‑approved requisitions
   
 ---
