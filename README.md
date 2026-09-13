@@ -24,7 +24,7 @@ The functional stage uses stand-alone functions that each perform one part of th
 - Display requisition details    
 
 ### How Part A Works
-- A global counter generates unique requisition IDs
+- A global `counter` generates unique requisition IDs
 - Each function performs one part of the workflow
 - Returned values are passed to the next function
 - The requisition is processed step‑by‑step using local variables
