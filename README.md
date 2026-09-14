@@ -31,7 +31,7 @@ The functional version uses stand-alone functions that each perform one step of 
 
 ---
 
-## Part B — Object-Oriented Version
+## Part B — Object-Oriented
 
 **File:** `requisition_system_part_b.py`
 
