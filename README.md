@@ -85,15 +85,15 @@ Part A keeps the workflow simple by using small, focused functions.
 Part B keeps the design simple by using one class with easy‑to‑read methods that handle each step of the process.
 
 ### Separation of Concerns
-Part A separates tasks into individual functions.
-Part B keeps all requisition‑related behaviour inside one class, while the testing code handles running scenarios and manager decisions.
+Part A separates concerns by placing each step of the workflow into individual functions.
+Part B seperates concerns by keeping all requisition‑related logic inside one class, while the testing code is responsible for running scenarios and manager decisions.
 
 ### Reusability
-Reusability applies only to Part B.
-The `RequisitionSystem` class can be reused in other simple prototypes because it contains all the logic needed to store, approve, and display a requisition.
+Reusability applies mainly to Part B because the entire class can be imported and used in other similar programs. It stores its own data and provides methods that manage a requisition process.
+Part A is less reusable because its functions rely on direct user input and are tied to a single specific workflow.
 
 ### DRY (Don’t Repeat Yourself)
-Both parts avoid repeating logic by using functions (Part A) and methods (Part B) to handle repeated actions such as collecting staff information, calculating totals, approving requisitions, and displaying results. This reduces duplication and keeps the workflow consistent.
+Both parts follow the DRY principle by placing repeated actions into functions (Part A) and methods (Part B). Tasks such as collecting staff information, calculating totals, approving requisitions, and displaying results are written once and reused, which reduces duplication and keeps the workflow consistent.
 
 ### Single Source of Truth
-Both parts use a single counter to generate unique requisition IDs. This ensures that ID generation is consistent and prevents duplication or conflicting values across multiple requisitions.
+Both parts follow the Single Source of Truth principle by using one counter to generate unique requisition IDs. This keeps the numbering consistent and prevents duplication or conflicting IDs across multiple requisitions.
