@@ -25,7 +25,7 @@ The functional version uses stand-alone functions that each perform one step of 
 
 ### How Part A Works
 - A global `counter` generates a unique requisition ID
-- Each function performs a specifice step in the workflow
+- Each function performs a specific step in the workflow
 - Returned values are passed to the next function
 - The requisition is processed step‑by‑step using local variables
 
@@ -86,7 +86,7 @@ Part B keeps the design simple by using one class with easy‑to‑read methods 
 
 ### Separation of Concerns
 Part A separates concerns by placing each step of the workflow into individual functions.
-Part B seperates concerns by keeping all requisition‑related logic inside one class, while the testing code is responsible for running scenarios and manager decisions.
+Part B separates concerns by keeping all requisition‑related logic inside one class, while the testing code is responsible for running scenarios and manager decisions.
 
 ### Reusability
 Reusability applies mainly to Part B because the entire class can be imported and used in other similar programs. It stores its own data and provides methods that manage a requisition process.
