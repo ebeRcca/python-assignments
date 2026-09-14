@@ -55,6 +55,11 @@ The OOP stage restructures the system using a single class that stores requisiti
   
 ---
 
+## Purpose
+The requisition system prototype was chosen to demonstrate how software design principles apply in both functional and object oriented programming approaches. Part A shows how a workflow can be built using small, single purpose functions, while Part B shows how the same workflow can be expanded and organised using a class that stores its own data and methods. Together, they highlight how design principles such as modularity, cohesion, abstraction, and encapsulation influence the structure and behaviour of a program.
+
+---
+
 ## Software Design Principles Demonstrated
 
 ### Modularity
