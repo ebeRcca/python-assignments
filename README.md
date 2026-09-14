@@ -8,9 +8,9 @@ This repository contains a prototype of a simple staff requisition system develo
 
 Each version implements the requisition workflow using a different software design approach. Part A uses a functional structure with stand‑alone functions, while Part B uses an object‑oriented class structure that also extends the workflow with additional features.
 
----
+## Programs Included
 
-## Part A — Functional 
+### Part A — Functional 
 
 **File:** `requisition_system_part_a.py`
 
@@ -29,9 +29,7 @@ The functional version uses stand-alone functions that each perform one step of 
 - Returned values are passed to the next function
 - The requisition is processed step‑by‑step using local variables
 
----
-
-## Part B — Object-Oriented
+### Part B — Object-Oriented
 
 **File:** `requisition_system_part_b.py`
 
@@ -52,13 +50,9 @@ The OOP stage restructures the system using a single class that stores requisiti
 - Methods such as `staff_info()`, `requisitions_details()`, and `requisition_approval()` update the object step‑by‑step through the workflow
 - Each object represents one requisition, and multiple objects allow the system to process multiple requisitions.
 - A statistics method counts approved, pending, and not‑approved requisitions
-  
----
 
 ## Purpose
 The requisition system prototype was chosen to demonstrate how software design principles apply in both functional and object oriented programming approaches. Part A shows how a workflow can be built using small, single purpose functions, while Part B shows how the same workflow can be expanded and organised using a class that stores its own data and methods. Together, they highlight how design principles such as modularity, cohesion, abstraction, and encapsulation influence the structure and behaviour of a program.
-
----
 
 ## Software Design Principles Demonstrated
 
