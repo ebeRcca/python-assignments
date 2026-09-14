@@ -72,17 +72,17 @@ The only shared element is the global `counter`, which is used solely for genera
 Part B shows low coupling because the testing code interacts with the class only through calling its methods, so internal changes to the class do not affect other parts of the program.
   
 ### Abstraction
-Part A hides how data is stored by using simple functions that return values.
-Part B hides internal details by storing requisition information inside the object and updating it through methods such as `staff_info()`, `requisitions_details()`, and `requisition_approval()`. 
+Part A uses abstraction because the functions hide how requisition data is collected and processed. The user only calls the functions and does not need to know how totals, approval, or staff details are handled internally.
+Part B uses abstraction because it hides internal details by storing requisition information inside the object and updating it only through methods such as `staff_info()`, `requisitions_details()`, and `requisition_approval()`. 
 
 ### Encapsulation
 Encapsulation applies only to Part B.
-Part B stores requisition details inside the object and updates them only through methods. The program does not directly modify attributes such as `status` or `total`; each method manages its own part of the data. 
+The class stores requisition details inside the object and updates them exclusively through its methods. The program does not directly modify attributes such as `status` or `total`; each method manages its own part of the data. 
 
 ### KISS (Keep It Simple)
-Both parts use straightforward logic and clear naming.
-Part A uses simple functions.
-Part B uses a single class with readable methods.
+Both parts follow the KISS principle by using straightforward logic and clear naming. 
+Part A keeps the workflow simple by using small, focused functions. 
+Part B keeps the design simple by using one class with easy‑to‑read methods that handle each step of the process.
 
 ### Separation of Concerns
 Part A separates tasks into individual functions.
