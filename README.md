@@ -67,8 +67,9 @@ Part A has functional cohesion because each function performs one related step i
 Part B’s class has high cohesion because every method contributes to the overall purpose of processing a requisition.
   
 ### Coupling
-Part A shows low coupling because each function only receives the data it needs and does not rely on other functions' internal workings. The only shared element is the global `counter`, which is used solely for generating unique IDs.
-Part B shows low coupling because the testing code interacts with the class only through method calls, so internal changes do not affect other parts of the program.
+Part A shows low coupling because each function only receives the data it needs and does not depend on how other functions work. 
+The only shared element is the global `counter`, which is used solely for generating a unique ID for each requisition.
+Part B shows low coupling because the testing code interacts with the class only through calling its methods, so internal changes to the class do not affect other parts of the program.
   
 ### Abstraction
 Part A hides how data is stored by using simple functions that return values.
